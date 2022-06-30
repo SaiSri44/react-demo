@@ -2,7 +2,7 @@ import "./App.css";
 import NewExpensesComponent from "./components/NewExpensesComponent";
 import React from "react";
 
-function App() {
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -36,6 +36,6 @@ function App() {
       <NewExpensesComponent expensesarr={expenses}></NewExpensesComponent>
     </div>
   );
-}
+};
 
 export default App;

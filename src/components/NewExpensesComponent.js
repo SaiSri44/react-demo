@@ -2,7 +2,7 @@ import ExpenseItem from "./ExpenseItem";
 import "./NewExpensesComponent.css";
 import React from "react";
 
-function NewExpensesComponent(props) {
+const NewExpensesComponent = (props) => {
   return (
     <div className="expenses">
       <ExpenseItem
@@ -27,6 +27,7 @@ function NewExpensesComponent(props) {
       ></ExpenseItem>
     </div>
   );
-}
+};
 
 export default NewExpensesComponent;
+ 

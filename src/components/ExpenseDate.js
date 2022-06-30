@@ -1,9 +1,9 @@
-//Always use this statement whenever there is JSX code, React has function createElement() which takes 
-// up the JSX code and turns into the browser friendly 
+//Always use this statement whenever there is JSX code, React has function createElement() which takes
+// up the JSX code and turns into the browser friendly
 import React from "react";
 import "./ExpenseDate.css";
 
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const year = props.date.getFullYear();
   const day = props.date.toLocaleString("en-US", { day: "2-digit" });
@@ -14,5 +14,5 @@ function ExpenseDate(props) {
       <div className="expense-date__day">{day}</div>
     </div>
   );
-} 
+};
 export default ExpenseDate;
