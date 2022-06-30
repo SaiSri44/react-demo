@@ -1,5 +1,6 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
+import React from "react";
 
 function ExpenseItem(props) {
   return (
@@ -11,5 +12,5 @@ function ExpenseItem(props) {
       </div>
     </div>
   );
-} 
+}
 export default ExpenseItem;

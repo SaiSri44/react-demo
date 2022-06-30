@@ -1,5 +1,6 @@
 import ExpenseItem from "./ExpenseItem";
 import "./NewExpensesComponent.css";
+import React from "react";
 
 function NewExpensesComponent(props) {
   return (

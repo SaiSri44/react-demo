@@ -1,3 +1,6 @@
+//Always use this statement whenever there is JSX code, React has function createElement() which takes 
+// up the JSX code and turns into the browser friendly 
+import React from "react";
 import "./ExpenseDate.css";
 
 function ExpenseDate(props) {
