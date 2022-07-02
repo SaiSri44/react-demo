@@ -1,6 +1,7 @@
 import "./App.css";
 import NewExpensesComponent from "./components/NewExpensesComponent";
 import React from "react";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -29,10 +30,17 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-
+  const importDataToAppHandler = (expense) => {
+    const expenseData = {
+      ...expense,
+    };
+    console.log("inside App");
+    console.log(expenseData);
+  };
   return (
     <div className="App">
       <h1>Hello SaiSri Angajala</h1>
+      <NewExpense importDataToApp={importDataToAppHandler}></NewExpense>
       <NewExpensesComponent expensesarr={expenses}></NewExpensesComponent>
     </div>
   );
