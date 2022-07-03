@@ -41,7 +41,7 @@ const ExpenseForm = (props) => {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
     /*Here we are storing the input values in the object, the keys of the object are up to us.
@@ -50,6 +50,10 @@ const ExpenseForm = (props) => {
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+    props.expand();
+  };
+  const cancelHandler = () => {
+    props.expand();
   };
   /*Two-way binding
   When the input is entered,the input doesn't resets when the form is submitted.
@@ -62,38 +66,41 @@ const ExpenseForm = (props) => {
   */
   return (
     <form>
-      <div className="new-expense__controls">
-        <div className="new-expense__control">
-          <label>Title</label>
-          <input
-            type="text"
-            onChange={titleChangeHandler}
-            value={enteredTitle}
-          />
-        </div>
-        <div className="new-expense__control">
-          <label>Amount</label>
-          <input
-            type="number"
-            min="0.01"
-            step="0.01"
-            onChange={amountChangeHandler}
-            value={enteredAmount}
-          />
-        </div>
-        <div className="new-expense__control">
-          <label>Date</label>
-          <input
-            type="date"
-            min="2019-01-01"
-            max="2022-12-31"
-            onChange={dateChangeHandler}
-            value={enteredDate}
-          />
-          {/* later we add the filter, for that we need minimum and maximum time period */}
-        </div>
-      </div>
       <div className="new-expense__actions">
+        <div className="new-expense__controls">
+          <div className="new-expense__control">
+            <label>Title</label>
+            <input
+              type="text"
+              onChange={titleChangeHandler}
+              value={enteredTitle}
+            />
+          </div>
+          <div className="new-expense__control">
+            <label>Amount</label>
+            <input
+              type="number"
+              min="0.01"
+              step="0.01"
+              onChange={amountChangeHandler}
+              value={enteredAmount}
+            />
+          </div>
+          <div className="new-expense__control">
+            <label>Date</label>
+            <input
+              type="date"
+              min="2019-01-01"
+              max="2022-12-31"
+              onChange={dateChangeHandler}
+              value={enteredDate}
+            />
+            {/* later we add the filter, for that we need minimum and maximum time period */}
+          </div>
+        </div>
+        <button type="button" onClick={cancelHandler}>
+          Cancel
+        </button>
         <button type="submit" onClick={submitHandler}>
           Add Expense
         </button>

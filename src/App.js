@@ -31,7 +31,7 @@ const App = () => {
   };
   return (
     <div className="App">
-      <h1>Hello SaiSri Angajala</h1>
+      <h1 style={{ color: "white" }}>Expense Tracker</h1>
       <NewExpense importDataToApp={importDataToAppHandler}></NewExpense>
       <NewExpensesComponent expensesarr={expenses}></NewExpensesComponent>
     </div>
@@ -43,4 +43,3 @@ export default App;
 // NOTE: changing any variable does not make the react to execute it again, so to make it excute it again we should use the state
 // Always remember this
 //Whenever we need to use the data from the previous state,it is better to use the function.
-  

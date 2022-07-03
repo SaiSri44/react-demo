@@ -3,6 +3,7 @@ import "./NewExpensesComponent.css";
 import React from "react";
 import ExpensesFilter from "./ExpensesFilter/ExpensesFilter";
 import { useState } from "react";
+import ExpensesChart from "./ExpensesChart";
 
 const NewExpensesComponent = (props) => {
   const [chosenYear, setChosenYear] = useState("2020");
@@ -23,6 +24,7 @@ const NewExpensesComponent = (props) => {
         selectedYear={chosenYear}
         importYearToNEC={importYearToNECHandler}
       ></ExpensesFilter>
+      <ExpensesChart expenses={filteredExpenses}></ExpensesChart>
       {/*
       React is capable of rendering the array of JSX elements. 
       Ex :[<ExpenseItem/> ,<ExpenesItem/>]
@@ -33,7 +35,9 @@ const NewExpensesComponent = (props) => {
       */}
 
       {filteredExpenses.length === 0 && (
-        <p color="white">No Expenses to display</p>
+        <p style={{ color: "white", fontWeight: "bold" }}>
+          No Expenses to display
+        </p>
       )}
 
       {filteredExpenses.length > 0 &&
