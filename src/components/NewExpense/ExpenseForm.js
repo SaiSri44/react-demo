@@ -3,7 +3,7 @@ import "./ExpenseForm.css";
 import { useState } from "react";
 
 const ExpenseForm = (props) => {
-  const [enteredTitle, setEnteredTitle] = useState("saisri");
+  const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
   /* on every keystroke the title gets changed.Now how do we capture the title.

@@ -7,8 +7,6 @@ const NewExpense = (props) => {
       ...expense,
       id: Math.random().toString(),
     };
-    console.log("Inside NewExpense");
-    console.log(expenseData);
     props.importDataToApp(expenseData);
   };
   return (
