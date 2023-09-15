@@ -43,7 +43,7 @@ const ExpenseForm = (props) => {
       title: enteredTitle,
       amount: +enteredAmount, //by default all the inputs are strings,we need to explictly convert them to desired data type.
       date: new Date(enteredDate),
-    }; 
+    };
     /*Here we are storing the input values in the object, the keys of the object are up to us.
     enteredDate is the string object, Date method parses it and convert it into the date object */
     props.importDataToNewExpense(expenseData);
