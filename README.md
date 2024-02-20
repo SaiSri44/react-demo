@@ -2,35 +2,38 @@ This is an Expense Tracker Application, which keeps tracks of the expenses over 
 In this applilcation the expenses over the years 2019-2022 are managed. 
 
 
-**Features of Application :**
+## Features of Application 
 
-1.Add a Expense
+- Add a Expense
 
-2.Filter the expenses by year
+- Filter the expenses by year
 
-3.Bar char showing the expenses in particular month of the year relative to maximum expense in that year.
+- Bar chart showing the expenses in particular month of the year relative to maximum expense in that year.
 
+## Images 
+![image](https://github.com/introvert9112k/Expenses-Tracker/assets/63279776/fae82370-520f-4e89-a33f-ab961c65bd34)
+![image](https://github.com/introvert9112k/Expenses-Tracker/assets/63279776/3c7052c1-6f14-4fa3-88f5-0353b9947f6e)
 
-**React Concepts used :** 
+## React Concepts used 
 
 This application build by me while learning the react JS.
 
 The core concepts used in application are :
 
-1.React components
+- React components
 
-2.props
+- props
 
-3.Two way binding
+- Two way binding
 
-4.States
+- States
 
-5.Rendering Lists
+- Rendering Lists
 
-6.Dynamic data
+- Dynamic data
 
-7.Events
+- Events
 
-8.Conditonal Statements
+- Conditonal Statements
 
-9.State up.
+- State up.
